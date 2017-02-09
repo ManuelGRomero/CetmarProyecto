@@ -1,0 +1,64 @@
+﻿@model IEnumerable<Sistema_Cetmar.Models.Especialista>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.especialistaRFC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.especialistaNombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.especialistaApellido)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.especialidad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.especialistaTelefono)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.especialistaDomicilio)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.especialistaRFC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.especialistaNombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.especialistaApellido)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.especialidad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.especialistaTelefono)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.especialistaDomicilio)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.especialistaID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.especialistaID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.especialistaID })
+        </td>
+    </tr>
+}
+
+</table>

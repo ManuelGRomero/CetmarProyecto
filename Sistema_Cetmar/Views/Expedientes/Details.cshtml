@@ -1,0 +1,35 @@
+﻿@model Sistema_Cetmar.Models.Expediente
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Expediente</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.alumnos.nombreAlumno)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.alumnos.nombreAlumno)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.especialistas.especialistaRFC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.especialistas.especialistaRFC)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.expedienteID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

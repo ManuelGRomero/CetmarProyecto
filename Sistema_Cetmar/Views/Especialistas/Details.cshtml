@@ -1,0 +1,67 @@
+﻿@model Sistema_Cetmar.Models.Especialista
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Especialista</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.especialistaRFC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.especialistaRFC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.especialistaNombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.especialistaNombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.especialistaApellido)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.especialistaApellido)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.especialidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.especialidad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.especialistaTelefono)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.especialistaTelefono)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.especialistaDomicilio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.especialistaDomicilio)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.especialistaID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,40 @@
+﻿@model IEnumerable<Sistema_Cetmar.Models.Expediente>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.alumnos.nombreAlumno)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.especialistas.especialistaRFC)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.alumnos.nombreAlumno)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.especialistas.especialistaRFC)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.expedienteID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.expedienteID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.expedienteID })
+        </td>
+    </tr>
+}
+
+</table>

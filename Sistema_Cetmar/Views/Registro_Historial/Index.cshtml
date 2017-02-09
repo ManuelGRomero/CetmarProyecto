@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Sistema_Cetmar.Models.Registro_Historial>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.registroHistorialnota)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.registroHistorialFecha)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.registroHistorialCanalizacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.expedianteID)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.registroHistorialnota)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.registroHistorialFecha)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.registroHistorialCanalizacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.expedianteID)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.registroHistorialID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.registroHistorialID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.registroHistorialID })
+        </td>
+    </tr>
+}
+
+</table>

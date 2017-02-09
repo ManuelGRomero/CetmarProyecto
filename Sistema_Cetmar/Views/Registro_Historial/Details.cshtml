@@ -1,0 +1,51 @@
+﻿@model Sistema_Cetmar.Models.Registro_Historial
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Registro_Historial</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.registroHistorialnota)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.registroHistorialnota)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.registroHistorialFecha)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.registroHistorialFecha)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.registroHistorialCanalizacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.registroHistorialCanalizacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.expedianteID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.expedianteID)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.registroHistorialID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
